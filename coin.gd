@@ -1,5 +1,6 @@
 extends Area3D
 
+const ROT_SPEED=2 #Number of deg coin rotates
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,4 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	rotate_y(deg_to_rad(ROT_SPEED))
+
+
+func _on_body_entered(body: Node3D) -> void:
+	queue_free() # Replace with function body.
