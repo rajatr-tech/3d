@@ -1,0 +1,14 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bymgtvspd13dx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hn12h"]
+sky_top_color = Color(0.026401738, 0.45607352, 0.7929697, 1)
+
+[sub_resource type="Sky" id="Sky_ihfcg"]
+sky_material = SubResource("ProceduralSkyMaterial_hn12h")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_ihfcg")
+ambient_light_color = Color(0.9384497, 0.9384497, 0.9384497, 1)
+ssr_enabled = true
+ssao_enabled = true
