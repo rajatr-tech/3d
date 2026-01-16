@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://m2as3xgne8rs"]
+
+[ext_resource type="Script" uid="uid://ckpuqt02mglt6" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="Texture2D" uid="uid://pjdu8k4apgta" path="res://Assets/Coin model/hud_coin.png" id="2_8sq4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
+bg_color = Color(0, 0, 0, 0.32156864)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_64ctp")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 27.0
+offset_top = 20.0
+offset_right = 167.0
+offset_bottom = 57.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 28.0
+offset_top = 20.0
+offset_right = 71.0
+offset_bottom = 56.0
+texture = ExtResource("2_8sq4i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 27.0
+offset_right = 91.0
+offset_bottom = 50.0
+text = "X"
+
+[node name="Coinslabel" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 26.0
+offset_right = 161.0
+offset_bottom = 49.0

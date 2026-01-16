@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfyxxwbr88jt"]
+
+[ext_resource type="Script" uid="uid://cun5njish4p4g" path="res://menu_game_win.gd" id="1_crnmb"]
+[ext_resource type="FontFile" uid="uid://d0jdudwpvycjo" path="res://Assets/waltograph/Waltograph UI Bold/waltographUI.ttf" id="1_twsdr"]
+[ext_resource type="Texture2D" uid="uid://dihnt445nnhf3" path="res://Assets/3D-Platformer-Menu-Images/image-screen-win.png" id="2_crnmb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhchj"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0, 0, 0, 0)
+
+[node name="MenuGameWin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_crnmb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -18.0
+offset_right = 1157.0
+offset_bottom = 647.0
+color = Color(0, 0.6784314, 0.54509807, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 49.0
+offset_right = 952.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0.41960785, 1, 0.21960784, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.9843137)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_twsdr")
+theme_override_font_sizes/font_size = 135
+text = "YOU WIN !"
+
+[node name="ImageScreenWin" type="Sprite2D" parent="."]
+position = Vector2(590.00006, 294)
+scale = Vector2(0.58518517, 0.58518517)
+texture = ExtResource("2_crnmb")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 530.0
+offset_right = 744.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_jhchj")
+text = "MAIN MENU"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

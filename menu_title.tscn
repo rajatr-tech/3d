@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://curx3ij50mjxc"]
+
+[ext_resource type="FontFile" uid="uid://fftrs4s7tvbk" path="res://Assets/kirifont/KiriFont.ttf" id="1_5cs7u"]
+[ext_resource type="Script" uid="uid://c68pc04kn73cu" path="res://menu_title.gd" id="1_weaej"]
+[ext_resource type="Texture2D" uid="uid://v82snnebk7md" path="res://Assets/3D-Platformer-Menu-Images/image-screen-title.png" id="2_weaej"]
+[ext_resource type="FontFile" uid="uid://d0jdudwpvycjo" path="res://Assets/waltograph/Waltograph UI Bold/waltographUI.ttf" id="3_k4cr3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cs7u"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0, 0, 0, 0)
+
+[node name="MenuTitle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_weaej")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -4.0
+offset_right = 1157.0
+offset_bottom = 650.0
+color = Color(6.016344e-07, 0, 0.3733142, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 57.0
+offset_right = 1073.0
+offset_bottom = 153.0
+rotation = -0.04506582
+theme_override_colors/font_color = Color(0.7294118, 0.07058824, 0.7137255, 1)
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.54509807, 0.19607843, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_5cs7u")
+theme_override_font_sizes/font_size = 71
+text = "3D PLATFORMER GAME!"
+
+[node name="ImageScreenTitle" type="Sprite2D" parent="."]
+position = Vector2(597, 376)
+scale = Vector2(0.5555555, 0.5555556)
+texture = ExtResource("2_weaej")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 250.0
+offset_right = 1083.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.21176471, 1)
+theme_override_colors/font_hover_color = Color(0.27450982, 1, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("3_k4cr3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_5cs7u")
+text = "PLAY"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
